@@ -51,3 +51,4 @@ if "prediction" in hasil:
 else:
     st.error("Key 'prediction' tidak ditemukan")
     st.json(hasil)
+    
