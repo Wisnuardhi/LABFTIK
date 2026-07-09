@@ -13,10 +13,10 @@ from pydantic import BaseModel
 import pickle
 import numpy as np
 
-app = FastAPI()
+hasil = response.json()
 
-model = pickle.load(open("model.pkl","rb"))
-scaler = pickle.load(open("scaler.pkl","rb"))
+st.success(f"Prediction : {hasil['prediction']}")
+st.metric("Probability", f"{hasil['probability']:.2%}")
 
 class InputData(BaseModel):
 
