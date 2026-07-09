@@ -41,8 +41,13 @@ if st.button("Predict"):
 
     )
 
-    hasil=response.json()
+hasil = response.json()
 
+if "prediction" in hasil:
     st.success(f"Prediction : {hasil['prediction']}")
 
-    st.metric("Probability",f"{hasil['probability']:.2%}")
+    if "probability" in hasil:
+        st.metric("Probability", f"{hasil['probability']:.2%}")
+else:
+    st.error("Key 'prediction' tidak ditemukan")
+    st.json(hasil)
