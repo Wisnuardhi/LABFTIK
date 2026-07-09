@@ -13,10 +13,10 @@ app = FastAPI()
 import pickle
 import numpy as np
 
-hasil = response.json()
+app = FastAPI()
 
-st.success(f"Prediction : {hasil['prediction']}")
-st.metric("Probability", f"{hasil['probability']:.2%}")
+model = pickle.load(open("model.pkl","rb"))
+scaler = pickle.load(open("scaler.pkl","rb"))
 
 class InputData(BaseModel):
 
