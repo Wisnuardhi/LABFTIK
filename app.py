@@ -29,7 +29,7 @@ for i in range(30):
 
 if st.button("Predict"):
 
-    url="https://labftik-git-main-labftik.vercel.app/predict"
+    url="https://labftik-git-main-labftik.vercel.app/api/predict"
 
     response=requests.post(
 
