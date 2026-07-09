@@ -9,7 +9,7 @@ Original file is located at
 
 from fastapi import FastAPI
 from pydantic import BaseModel
-app = FastAPI()
+
 import pickle
 import numpy as np
 
